@@ -12,16 +12,16 @@ public class Sat {
     }
     private void prethodni() {
         sekunde--;
-        if (sekunde ==- 1) { sekunde = 59; minute--; }
-        if (minute == -1) { minute = 59; sati--; }
-        if (sati == -1) sati = 23;
+        if ( sekunde ==- 1 ) { sekunde = 59; minute--; }
+        if ( minute == -1 ) { minute = 59; sati--; }
+        if ( sati == -1 ) sati = 23;
     }
     void pomjeriZa(int pomak) {
-        if (pomak>0) for (int i=0; i<pomak; i++) sljedeci();
-		else for (int i=0; i<-pomak; i++) prethodni();
+        if ( pomak > 0 ) for (int i = 0 ; i < pomak ; i=i+1) sljedeci();
+		else for (int i = 0 ; i < -pomak; i = i + 1) prethodni();
     }
-    public int DajSate()  { return sati; }
-    public int DajMinute()  { return minute; }
-    public int DajSekunde()  { return sekunde; }
-    void Ispisi()  { System.out.printf("%d:%d:%d\n",sati,minute,sekunde); }
+    public int dajSate()  { return sati; }
+    public int dajMinute()  { return minute; }
+    public int dajSekunde()  { return sekunde; }
+    void ispisi()  { System.out.printf("%d:%d:%d\n",sati,minute,sekunde); }
 }
